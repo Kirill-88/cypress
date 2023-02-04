@@ -4,7 +4,6 @@ describe('Магазин мебели', function() {
         cy.visit('https://testqastudio.me/');
         cy.get('.post-11342 > .product-inner > .product-thumbnail > .woocommerce-LoopProduct-link > .attachment-woocommerce_thumbnail').click();
         cy.get('.summary > .cart > .product-button-wrapper > .quantity > .increase > svg').click();
-        cy.get('.summary > .cart > .product-button-wrapper > .quantity > .increase > svg').click();
         cy.intercept('POST', '/product/**').as('ajax-product');
         cy.intercept('/?wc-ajax=get_refreshed_fragments').as('ajax-reload');
         cy.get('.summary > .cart > .product-button-wrapper > .single_add_to_cart_button').click();
