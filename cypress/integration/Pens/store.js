@@ -27,7 +27,7 @@ describe('Магазин мебели', function() {
         cy.get('#billing_state').type('Ломоносовская');
         cy.get('#billing_postcode').type('140182');
         cy.get('#billing_phone').type('89656584854');
-        cy.get('#billing_email').type('german@dolnikov.ru');
+        cy.get('#billing_email').type('example@adress.ru');
         cy.get('#place_order').click();
         cy.contains('Ваш заказ принят. Благодарим вас.');
     })
